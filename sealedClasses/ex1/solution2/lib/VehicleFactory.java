@@ -1,0 +1,11 @@
+package sealedClasses.ex1.solution2.lib;
+
+public class VehicleFactory {
+
+    public static Vehicle forMaxWeight(int weight) {
+        if (weight < 500) {
+            return new Car();
+        }
+        return new Truck();
+    }
+}
