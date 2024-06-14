@@ -21,6 +21,7 @@ public class GeneralPoints {
     }
 
     // If no null, then use Object
+    // If no null or Object, then if "o" is null, then switch will throw a NullPointerException
     static double getDoubleUsingSwitchTotalType(Object o) {
         return switch (o) {
             case String s -> Double.parseDouble(s);
