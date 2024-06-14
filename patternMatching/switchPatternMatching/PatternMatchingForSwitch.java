@@ -12,7 +12,6 @@ class PatternMatchingForSwitch {
         public static double getPerimeter(Shape shape) throws IllegalArgumentException {
             return switch (shape) {
                 case Circle c -> 2 * c.radius() * Math.PI;
-                case Rectangle r when r.length() == r.width() -> 4 * r.length();
                 case Rectangle r -> 2 * r.length() + 2 * r.width();
                 default -> throw new IllegalArgumentException("Unrecognized shape");
             };
