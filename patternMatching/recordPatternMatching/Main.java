@@ -14,6 +14,7 @@ public class Main {
         printName(chennaiLocation);
 //        printNameWithRecordPattern1(chennaiLocation);
 //        printNameWithRecordPattern2(chennaiLocation);
+//        printNameWithRecordPatternInSwitch(chennaiLocation);
     }
 
 
@@ -51,6 +52,18 @@ public class Main {
                     latitude,
                     longitude
             );
+        }
+    }
+
+    static void printNameWithRecordPatternInSwitch(Object object) {
+        switch (object) {
+            case Location (String name, GPSPoint (double latitude, double longitude)) -> System.out.printf(
+                    "Name: %s, Lat: %f, Lng: %f\n",
+                    name,
+                    latitude,
+                    longitude
+            );
+            default -> throw new IllegalStateException("Unexpected value: " + object);
         }
     }
 }
